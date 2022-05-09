@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 4.8.4
+- https://www.phpmyadmin.net
+-
+- Host: 127.0.0.1
+- Generation Time: Jan 03, 2019 at 11:17 AM
+- Server version: 10.1.37-MariaDB
+- PHP Version: 7.3.0
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="registration" collation="latin1_swedish_ci" charset="latin1">
+            <pma:table name="locations">
+                CREATE TABLE `locations` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `lat` float(10,6) NOT NULL,
+                  `lng` float(10,6) NOT NULL,
+                  `description` varchar(200) NOT NULL,
+                  `location_status` tinyint(1) DEFAULT NULL,
+                  `address` varchar(200) NOT NULL,
+                  `time` varchar(20) NOT NULL,
+                  `images` longblob NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'registration'
+    -->
+    <database name="registration">
+        <!-- Table locations -->
+    </database>
+</pma_xml_export>
